@@ -1,0 +1,97 @@
+/* Banner Image */
+.banner_image {
+  background: url("/img/pascal-van-de-vendel-gcG_b9ijyqU-unsplash.jpg") no-repeat top center;
+  background-size: cover;
+  width: 100%;
+  height: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner_content {
+  text-align: center;
+  color: #fff;
+}
+
+.banner_content h1 {
+  text-transform: uppercase;
+  line-height: 38px;
+  margin-bottom: 15px;
+}
+
+.banner_content h1 span {
+  color: #fb2274;
+}
+/********************************CARDS**********************/
+.card-wrapper {
+  display: inline-block;
+  perspective: 1000px;
+}
+.card-wrapper .card {
+  position: relative;
+  cursor: pointer;
+  transition-duration: 0.6s;
+  transition-timing-function: ease-in-out;
+  transform-style: preserve-3d;
+}
+.card-wrapper .card .front,
+.card-wrapper .card .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform: rotateX(0deg);
+}
+.card-wrapper .card .front {
+  z-index: 2;
+}
+.card-wrapper .card .back,
+.card-wrapper.flip-right .card .back {
+  transform: rotateY(180deg);
+}
+.card-wrapper:hover .card,
+.card-wrapper.flip-right:hover .card {
+  transform: rotateY(180deg);
+}
+
+.card-wrapper.flip-diagonal-right .card .back {
+  transform: rotate3d(1, 1, 0, 180deg);
+}
+.card-wrapper.flip-diagonal-right:hover .card {
+  transform: rotate3d(1, 1, 0, 180deg);
+}
+
+/* DEMO */
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.card-wrapper,
+.card {
+  width: 600px;
+  height: 600px;
+  margin: 10px;
+}
+.card .front,
+.card .back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #FC545E;
+  border-radius: 4px;
+}
+.card .front {
+  color: #FC545E;
+  background: #FFFFFF;
+  font-weight: 700;
+  font-size: 1rem;
+}
+.card .back {
+  font-size: 1.5rem;
+  color: #FFFFFF;
+  background: #FC545E;
+}
