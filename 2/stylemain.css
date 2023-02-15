@@ -1,0 +1,200 @@
+/******************************* About us ***************************************/
+.about,
+.news,
+.contactus,
+.ourteam {
+  padding: 30px;
+  text-align: center;
+}
+h3.title {
+    font-size: large;
+    color: #7dbad2;
+    font-weight: bold;
+}
+
+/************************************* NEWS/ARTICLES***********************************/
+
+
+.band {
+  width: 90%;
+  max-width: 1740px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 20px;
+}
+@media (min-width: 30em) {
+  .band {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 60em) {
+  .band {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.card {
+  background: white;
+  text-decoration: none;
+  color: #444;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  position: relative;
+  top: 0;
+  transition: all 0.1s ease-in;
+}
+.card:hover {
+  top: -2px;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+}
+.card article {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card h1 {
+  font-size: 20px;
+  margin: 0;
+  color: #333;
+}
+.card p {
+  flex: 1;
+  line-height: 1.4;
+}
+.card span {
+  font-size: 12px;
+  font-weight: bold;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 2em 0 0 0;
+}
+.card .thumb {
+  padding-bottom: 60%;
+  background-size: cover;
+  background-position: center center;
+}
+
+@media (min-width: 60em) {
+  .item-1 {
+    grid-column: 1/span 2;
+  }
+  .item-1 h1 {
+    font-size: 24px;
+  }
+}
+
+/*****************Scalloped up and down***********************/
+
+/***************************************Comming soon******************************************/
+
+.colour-block {
+  background: #8cc3e3;
+  width: 100%;
+  color: #fff;
+}
+.white-block {
+  background: #fff;
+  width: 100%;
+  color: #8cc3e3;
+}
+
+
+/*----------------*/
+/*  SCALLOP down  */
+/*----------------*/
+.scallop-down {
+  height: 100px;
+  width: 100%;
+  background: -webkit-gradient(
+    radial,
+    50% 0,
+    10,
+    50% 0,
+    40,
+    from(#8cc3e3),
+    color-stop(0.49, #8cc3e3),
+    color-stop(0.51, #fff),
+    to(white)
+  );
+  -webkit-background-size: 49px 100%;
+}
+
+/*----------------*/
+/*  SCALLOP up    */
+/*----------------*/
+.scallop-up {
+  height: 100px;
+  width: 100%;
+  background: -webkit-gradient(
+    radial,
+    50% 100%,
+    10,
+    50% 100%,
+    40,
+    from(#8cc3e3),
+    color-stop(0.49, #8cc3e3),
+    color-stop(0.51, #fff),
+    to(white)
+  );
+  -webkit-background-size: 49px 100%;
+}
+
+
+
+/*************************************** Contact Us ******************************************/
+.form_input {
+  margin-bottom: 15px;
+}
+
+.form_input input[type="text"] {
+  width: 250px;
+  padding: 12px 20px;
+  border: 1px solid #ccc;
+}
+
+.form_input textarea {
+  width: 250px;
+  padding: 12px 20px;
+  height: 80px;
+  resize: none;
+  border: 1px solid #ccc;
+}
+
+/* Our Team*/
+.ourteam {
+  background: #f5f5f5;
+}
+
+.ourteam_wrapper .team {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ourteam_wrapper .team-1.team {
+  margin-bottom: 25px;
+}
+
+.ourteam_wrapper .team_member {
+  width: 30%;
+  height: auto;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.ourteam_wrapper .team_member img {
+  width: 100%;
+  display: block;
+  height: auto;
+  transition: all 0.5s ease;
+}
+
+.ourteam_wrapper .team_member:hover img {
+  transform: scale(1.1);
+}
